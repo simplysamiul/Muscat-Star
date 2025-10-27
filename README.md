@@ -1,1 +1,1 @@
-<img src="https://i.ibb.co.com/DfVmyXSx/muscat-star.png" alt="Full Screenshot" width="100%">
+<img src="./src/assets/muscat star.png" alt="Full Screenshot" width="100%">
