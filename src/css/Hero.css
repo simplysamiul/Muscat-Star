@@ -1,0 +1,13 @@
+/* Swiper pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #A1045A !important; /* Default dot color */
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* Active bullet (current slide) */
+.swiper-pagination-bullet-active {
+  background: linear-gradient(90deg, #6A0DAD, #A1045A) !important;
+  box-shadow: 0 0 8px rgba(161, 4, 90, 0.6);
+  opacity: 1;
+}

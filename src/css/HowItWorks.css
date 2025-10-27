@@ -1,0 +1,53 @@
+.animated-card-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 3px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinning conic gradient border */
+.animated-card-wrapper::before {
+  content: "";
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  height: 150%;
+  width: 150%;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, var(--color-start) 0deg, transparent 80deg);
+  animation: border-spin 8s linear infinite;
+  z-index: 0;
+}
+
+@keyframes border-spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Matching border colors */
+.border-purple::before {
+  --color-start: #6A0DAD;
+}
+.border-magenta::before {
+  --color-start: #A1045A;
+}
+.border-yellow::before {
+  --color-start: #FACC15;
+}
+.border-aqua::before {
+  --color-start: #0EA5E9;
+}
+
+/* Content stays above border layer */
+.animated-card-wrapper > div {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
